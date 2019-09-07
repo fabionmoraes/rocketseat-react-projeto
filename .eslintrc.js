@@ -12,9 +12,11 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
+      experimentalObjectRestSpread: true
     },
     ecmaVersion: 2018,
     sourceType: 'module',
@@ -25,6 +27,7 @@ module.exports = {
   ],
   rules: {
     'prettier/prettier': 'error',
+    'react/state-in-constructor': 'off',
     'react/jsx-filename-extension': [
       'warn',
       { extensions: ['.jsx', '.js'] }
